@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import base64 from 'react-native-base64';
+import './styles.css'
 
 import logo from '../../assets/CEEB.svg';
 
@@ -23,16 +24,21 @@ export default class Main extends Component {
         console.log(response.data.accessToken);
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log("On HandleSubmit!");
+    }
+
     render () {
         return (
-            <div className="conainer">
-                <img src={logo} alt="CEEB"/>
-                <h1>Informativo CEEB</h1>
+            <div className="container">
+                <img src={logo} alt="CEB"/> 
+                <h1>Informativo CEB</h1>
 
                 <div className="content">
-                    <p>Para prosseguir, se autentique</p>
+                    <p>Login</p>
 
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <label htmlFor="email">E-mail</label>
                         <input 
                             id="email" 
@@ -49,7 +55,7 @@ export default class Main extends Component {
                             placeholder="Digite sua senha"
                         />  
 
-                        <button type="submit">Autenticar</button>  
+                        <button className="btn" type="submit">Autenticar</button>  
                     </form> 
                 </div>
             </div>
