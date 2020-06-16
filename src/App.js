@@ -1,15 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
 import Main from './pages/main';
+import Routes from './components/routes';
 import './styles.css'
 
 const App = () => (
   <div className="App">
     <Header />
-    <Main />
+    <Routes />
   </div>
-
-  
 );
 
 // function App() {

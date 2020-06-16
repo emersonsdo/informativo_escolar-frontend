@@ -7,10 +7,16 @@
     align-items: center;
 }
 
+.container img {
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
 .content {
     width: 100%;
     background: #FFF;
-    margin-top: 50px;
+    margin-top: 40px;
     border-radius: 4px;
     padding: 30px;
 }
