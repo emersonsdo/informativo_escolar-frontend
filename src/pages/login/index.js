@@ -5,7 +5,7 @@ import './styles.css'
 
 import logo from '../../assets/CEB.svg';
 
-export default class Main extends Component {
+export default class Login extends Component {
     state = {
         email: '',
         password: '',

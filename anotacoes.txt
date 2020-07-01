@@ -1,0 +1,4 @@
+A fazer:
+
+- Redirect quando logar e quando deslogar
+- Apagar pasta logout
