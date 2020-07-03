@@ -2,3 +2,5 @@ A fazer:
 
 - Redirect quando logar e quando deslogar
 - Apagar pasta logout
+- Verificar código de retorno do serviço
+-Como usar a variável history na classe?

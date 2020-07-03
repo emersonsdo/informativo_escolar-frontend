@@ -38,6 +38,7 @@ export default class Login extends Component {
         localStorage.setItem('user', email);
         console.log('Usuário: ' + localStorage.getItem('user'));
 
+        // history.push('/parents');
     }
 
     updateEmailValue = (event) => {
