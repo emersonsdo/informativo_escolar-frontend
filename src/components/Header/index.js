@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
-import Routes from '../../components/routes';
+import history from '../../utils/history';
 import './styles.css'
-
-//Stateless component. Componentes formados apenas por funções, e tem esse
-//const Header = () => (
-//    <header id="main-header">Informativo CEB</header>
-//); 
-
-//export default Header;
 
 export default class Header extends Component {
 
     logout = () => {
         localStorage.clear();
-        this.context.Routes.push('/')
+        history.push('/');
     }
 
     render() {

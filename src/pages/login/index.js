@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import api from '../../services/api';
 import base64 from 'react-native-base64';
 import './styles.css'
 
 import logo from '../../assets/CEB.svg';
 
-export default class Login extends Component {
+class Login extends Component {
     state = {
         email: '',
         password: '',
@@ -19,6 +20,7 @@ export default class Login extends Component {
 
     getAccessToken = async (event) => {
         event.preventDefault();
+
         const email = this.state.email; //'email_de_luisa@provedor.com';
         const password = this.state.password; //'12345';
 
@@ -38,7 +40,8 @@ export default class Login extends Component {
         localStorage.setItem('user', email);
         console.log('Usuário: ' + localStorage.getItem('user'));
 
-        // history.push('/parents');
+        const { history } = this.props;
+        history.push('/parents');
     }
 
     updateEmailValue = (event) => {
@@ -82,3 +85,5 @@ export default class Login extends Component {
         );
     }
 }
+
+export default withRouter(Login);
