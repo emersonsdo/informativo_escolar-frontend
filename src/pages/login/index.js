@@ -24,24 +24,33 @@ class Login extends Component {
         const email = this.state.email; //'email_de_luisa@provedor.com';
         const password = this.state.password; //'12345';
 
-        const response = await api.post('/auth',
-        {
-            //TODO: Corrigir, mandar em cabeçalho
-            headers:{'Authorization': 'Basic ' + base64.encode(email + ":" + password)}
-        });
+        const response = null;
+
+        try {
+            response = await api.post('/auth',
+            null,
+            {
+                headers:{'Authorization': 'Basic ' + base64.encode(email + ":" + password)}
+            });
+        
+            this.setState({accessToken: response.data.accessToken});
+            this.setState({refreshToken: response.data.refreshToken});
+            console.log(this.state.accessToken);
+
+            localStorage.setItem('user', email);
+            console.log('Usuário: ' + localStorage.getItem('user'));
     
-        this.setState({accessToken: response.data.accessToken});
-        this.setState({refreshToken: response.data.refreshToken});
-        console.log(this.state.accessToken);
-
-        const code = response.data;
-        console.log('code: ' + code);
-
-        localStorage.setItem('user', email);
-        console.log('Usuário: ' + localStorage.getItem('user'));
-
-        const { history } = this.props;
-        history.push('/parents');
+            const { history } = this.props;
+            history.push('/parents');
+        } catch (error) {
+            console.log(`Error Status: ${error.response.status}`);
+            console.log(`Error Message: ${error.response.data['message']}`);
+            // console.log(`Error Message: ${JSON.stringify(error.response.data)}`);
+            console.log(`Error: ${error}`)
+    
+            // if (response.status === 401) {
+            // }
+        }
     }
 
     updateEmailValue = (event) => {

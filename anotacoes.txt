@@ -4,8 +4,9 @@ A fazer:
 - Apagar pasta logout (OK)
 - Como usar a variável history na classe? (OK)
 
-- Tratar envio das credenciais. Verificar a forma correta. 
-- Verificar código de retorno do serviço, e tratar erros apropriadamente:
+- Tratar envio das credenciais. Verificar a forma correta. (OK)
+- Verificar código de retorno do serviço (OK)
+- Tratar erros apropriadamente:
     - EX.: Exibir mensagens de erro ao logar 
 
 - Pensar no melhor fluxo de navegação
