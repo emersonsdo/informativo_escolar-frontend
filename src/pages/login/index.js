@@ -24,10 +24,14 @@ class Login extends Component {
         const email = this.state.email; //'email_de_luisa@provedor.com';
         const password = this.state.password; //'12345';
 
-        const response = null;
+        if (!email || !password) {
+            console.log("E-MAIL e SENHA devem ser preenchidos!");
+            this.setState({errorMessage: "EMAIL e SENHA devem ser preenchidos!"});
+            return;
+        }
 
         try {
-            response = await api.post('/auth',
+            const response = await api.post('/auth',
             null,
             {
                 headers:{'Authorization': 'Basic ' + base64.encode(email + ":" + password)}
@@ -42,23 +46,28 @@ class Login extends Component {
     
             const { history } = this.props;
             history.push('/parents');
+
         } catch (error) {
-            console.log(`Error Status: ${error.response.status}`);
-            console.log(`Error Message: ${error.response.data['message']}`);
-            // console.log(`Error Message: ${JSON.stringify(error.response.data)}`);
-            console.log(`Error: ${error}`)
-    
-            // if (response.status === 401) {
-            // }
+            // console.log(`Error JSON: ${JSON.stringify(error.response)}`);
+            const statusCode = error.response.status;
+
+            //TODO: Fazer tratamento adequadamente aqui
+            if (statusCode === 401) {
+                console.log("Usuário e/ou senha incorretos");
+            } else {
+                console.log("Houve um erro escroto ao tentar logar");
+            }
         }
     }
 
     updateEmailValue = (event) => {
         this.setState({email: event.target.value});
+        this.setState({errorMessage: ''});
     }
 
     updatePasswordValue = (event) => {
         this.setState({password: event.target.value});
+        this.setState({errorMessage: ''});
     }
 
     render () {
@@ -68,6 +77,9 @@ class Login extends Component {
                 <h1>Informativo CEB</h1>
 
                 <div className="content">
+                    { this.state.errorMessage &&
+                      <h4 className="error"> { this.state.errorMessage } </h4> }
+
                     <p>Login</p>
                     <form onSubmit={this.getAccessToken}>
                         <label htmlFor="email">E-MAIL</label>
@@ -80,7 +92,7 @@ class Login extends Component {
 
                         <br/>
 
-                        <label htmlFor="senha">Senha</label>
+                        <label htmlFor="senha">SENHA</label>
                         <input
                             id="senha"
                             type="password"

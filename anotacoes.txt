@@ -6,6 +6,7 @@ A fazer:
 
 - Tratar envio das credenciais. Verificar a forma correta. (OK)
 - Verificar código de retorno do serviço (OK)
+- Verificar se email e senha foram preenchidos antes de enviar a requisição (OK)
 - Tratar erros apropriadamente:
     - EX.: Exibir mensagens de erro ao logar 
 
