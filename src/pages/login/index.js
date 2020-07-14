@@ -26,7 +26,7 @@ class Login extends Component {
 
         if (!email || !password) {
             console.log("E-MAIL e SENHA devem ser preenchidos!");
-            this.setState({errorMessage: "EMAIL e SENHA devem ser preenchidos!"});
+            this.setState({errorMessageEmptyFields: "EMAIL e SENHA devem ser preenchidos!"});
             return;
         }
 
@@ -51,11 +51,11 @@ class Login extends Component {
             // console.log(`Error JSON: ${JSON.stringify(error.response)}`);
             const statusCode = error.response.status;
 
-            //TODO: Fazer tratamento adequadamente aqui
             if (statusCode === 401) {
-                console.log("Usuário e/ou senha incorretos");
+                this.setState({errorMessage: 'Usuário ou senha inválidos'})
             } else {
                 console.log("Houve um erro escroto ao tentar logar");
+                this.setState({errorMessage: 'Erro inesperado. Contacte o administrador do sistema'})
             }
         }
     }
