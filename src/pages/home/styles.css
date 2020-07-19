@@ -1,0 +1,53 @@
+body {
+    background-image: url('../../assets/background-gerenciar.jpg');
+    background-size: cover;
+}
+
+.container-home {
+    min-height: 580px;
+    height: auto !important;
+    height: 580px;
+    margin: 80px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttons {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.buttons button.btn-news{
+    margin-left: 50px;
+    margin-right: 50px;
+    align-self: center;
+}
+
+.buttons button.btn-parents{
+    margin-left: 50px;
+    margin-right: 50px;
+    align-self: center;
+}
+
+.buttons button.btn-users{
+    margin-left: 50px;
+    margin-right: 50px;
+    align-self: center;
+}
+
+.footer {
+    align-self: flex-end;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    font-size: 11px;
+}
+
+.footer > a{
+    color: #690b61;
+}

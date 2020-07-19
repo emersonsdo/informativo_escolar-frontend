@@ -8,6 +8,9 @@ A fazer:
 - Verificar código de retorno do serviço (OK)
 - Verificar se email e senha foram preenchidos antes de enviar a requisição (OK)
 - Tratar erros apropriadamente:
-    - EX.: Exibir mensagens de erro ao logar 
+    - EX.: Exibir mensagens de erro ao logar (OK)
 
 - Pensar no melhor fluxo de navegação
+- CSS da página home
+- Linkar botões da página home
+- Deixar página home como privada e substituir a parents como página redirecionada na hora que o login é realizado com sucesso
