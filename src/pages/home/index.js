@@ -12,6 +12,8 @@ class Home extends Component {
     render () {
         return (
             <div className="container-home">
+                <h1>O que deseja fazer?</h1>
+
                 <div className="buttons">
                     <button className="btn-news" type="submit">Enviar avisos</button>
                     <button className="btn-parents" type="submit">Gerenciar pais/responsáveis</button>
