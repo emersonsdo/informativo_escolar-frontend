@@ -1,100 +1,59 @@
-body {
-    background-image: url('../../assets/background-gerenciar.jpg');
-    background-size: cover;
-}
-
 .container-home {
-    min-height: 600px;
-    height: auto !important;
-    height: 600px;
-    margin-top: 80px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    padding: 10px 16px;
+    width: auto;
+    max-width: 500px;
+    height: 92vh;
 }
 
-.container-home > h1{
-    position: absolute;
-    align-self: center;
-    margin-top: 80px;
-    color: #519e0d;
+.container-home > h2{
+    color: var(--dark-text-primary-color);
+    margin-top: 4vh;
 }
 
-.buttons {
-    position: absolute;
+.container-buttons {
     display: flex;
     flex-direction: column;
-    margin-top: 230px;
+    margin-top: 10vh;
     width: 100%;
-    height: 200px;
 }
 
-.buttons button.btn-news{
+.container-buttons .button {
     border: 0;
-    border-radius: 3px;
-    width: 14%;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
-    font-weight: bold;
-    background: rgb(231, 168, 131);
-    color: #fff;
+    border-radius: 2px;
+    width: 100%;
+    height: 8vh;
+    margin: 4vh 0;
+    font-size: medium;
     cursor: pointer;
     align-self: center;
-}
-
-.buttons button.btn-news:hover {
-    background: rgb(219, 135, 86);
-}
-
-.buttons button.btn-parents{
-    border: 0;
-    border-radius: 3px;
-    width: 14%;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
     font-weight: bold;
-    background: rgb(219, 206, 86);
-    color: #fff;
-    cursor: pointer;
-    margin-top: 39px;
-    align-self: center;
+    color: var(--lightsome-button-text-color);
 }
 
-.buttons button.btn-parents:hover {
-    background: rgb(187, 174, 60);
+#btn-news {
+    margin-top: 0;
+    background: var(--home-button-one-light-color);
 }
 
-.buttons button.btn-users{
-    border: 0;
-    border-radius: 3px;
-    width: 14%;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
-    font-weight: bold;
-    background: rgb(219, 91, 86);
-    color: #fff;
-    cursor: pointer;
-    margin-top: 40px;
-    align-self: center;
+#btn-news:hover {
+    background: var(--home-button-one-dark-color);
 }
 
-.buttons button.btn-users:hover {
-    background: rgb(182, 59, 55);
+#btn-parents{
+    background: var(--home-button-two-light-color);
 }
 
-.footer {
-    position: absolute;
-    align-self: flex-end;
-    margin-top: 570px;
-    margin-right: 14px;
-    font-size: 11px;
+#btn-parents:hover {
+    background: var(--home-button-two-dark-color);
 }
 
-.footer > a{
-    color: #690b61;
+#btn-users{
+    background: var(--home-button-three-light-color);
+}
+
+#btn-users:hover {
+    background: var(--home-button-three-dark-color);
 }

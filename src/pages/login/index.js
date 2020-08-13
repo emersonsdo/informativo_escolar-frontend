@@ -74,7 +74,7 @@ class Login extends Component {
         return (
             <div className="container">
                 <img src={logo} alt="CEB"/> 
-                <h1>Informativo CEB</h1>
+                <h1>Área Gerencial</h1>
 
                 <div className="content">
                     { this.state.errorMessage &&

@@ -12,17 +12,14 @@ class Home extends Component {
     render () {
         return (
             <div className="container-home">
-                <h1>O que deseja fazer?</h1>
+                <h2>O que deseja fazer?</h2>
 
-                <div className="buttons">
-                    <button className="btn-news" type="submit">Enviar avisos</button>
-                    <button className="btn-parents" type="submit">Gerenciar pais/responsáveis</button>
-                    <button className="btn-users" type="submit">Gerenciar usuários administrativos</button>
+                <div className="container-buttons">
+                    <button className="button" id="btn-news" type="submit">Gerenciar avisos</button>
+                    <button className="button" id="btn-parents" type="submit">Gerenciar pais/responsáveis</button>
+                    <button className="button" id="btn-users" type="submit">Gerenciar usuários administrativos</button>
                 </div>
             
-                <div className="footer">
-                    <a href="https://www.freepik.com">imagem designed by Freepik</a>
-                </div>
             </div>
         );
     }
