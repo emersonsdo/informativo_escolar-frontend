@@ -26,7 +26,7 @@ class Login extends Component {
 
         if (!email || !password) {
             console.log("E-MAIL e SENHA devem ser preenchidos!");
-            this.setState({errorMessageEmptyFields: "EMAIL e SENHA devem ser preenchidos!"});
+            this.setState({errorMessage: "EMAIL e SENHA devem ser preenchidos!"});
             return;
         }
 
@@ -78,7 +78,7 @@ class Login extends Component {
 
                 <div className="content">
                     { this.state.errorMessage &&
-                      <h4 className="error"> { this.state.errorMessage } </h4> }
+                      <h4 id="error"> { this.state.errorMessage } </h4> }
 
                     <p>Login</p>
                     <form onSubmit={this.getAccessToken}>

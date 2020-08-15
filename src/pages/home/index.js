@@ -15,6 +15,7 @@ class Home extends Component {
                 <h2>O que deseja fazer?</h2>
 
                 <div className="container-buttons">
+                    {/* esses botões poderiam ser links a */}
                     <button className="button" id="btn-news" type="submit">Gerenciar avisos</button>
                     <button className="button" id="btn-parents" type="submit">Gerenciar pais/responsáveis</button>
                     <button className="button" id="btn-users" type="submit">Gerenciar usuários administrativos</button>
