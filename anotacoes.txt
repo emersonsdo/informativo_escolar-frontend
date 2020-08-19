@@ -14,3 +14,9 @@ A fazer:
 - CSS da página home
 - Linkar botões da página home
 - Deixar página home como privada e substituir a parents como página redirecionada na hora que o login é realizado com sucesso
+
+#8A599A    -lilas
+
+#00468C     -azives
+
+#679A38     -verde

@@ -17,7 +17,7 @@ export default class Header extends Component {
                </div>
                
                <div className = "header-logout-button">
-                    <button id="logout-btn" type="submit" onClick={this.logout}>Sair</button>
+                    <button id="logout-btn" type="submit" onClick={this.logout}>Sair<span></span></button>
                </div>
            </div>
        );

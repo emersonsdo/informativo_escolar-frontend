@@ -7,9 +7,12 @@
 
 :root{
     --backgroud-primary-color: #f5f5f5;
-    --primary-color: #519e0d;
-    --secondary-color: #860e7c;
-    --secondary-dark-color:#690b61;
+    --primary-color: #00468C;
+    --primary-dark-color: #02376d;
+    --secondary-color: #8A599A;
+    --secondary-dark-color: #774388; 
+    --tertiary-color: #679A38;
+    --tertiary-dark-color: #53802a; 
     --lightsome-text-color: #ffffff;
     --lightsome-button-text-color: #fff;
     --dark-text-primary-color: #423e3a;
@@ -24,12 +27,14 @@
 }
 
 body, html, #root {
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
     /* min-height: 100%; */
-    background-color: var(--backgroud-primary-color);
+    /* background-color: var(--backgroud-primary-color); */
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333
+    font-family: 'Baloo 2', cursive;
+    color: #333 
 }
 

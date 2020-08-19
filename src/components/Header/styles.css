@@ -11,8 +11,7 @@
 
 .header-text {
     font-size: larger;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
     color: var(--lightsome-text-color);
 }
 
@@ -29,15 +28,27 @@
 }
 
 #logout-btn {
-    border: 0;
+    border: 1px solid var(--lightsome-text-color);
+    border-radius: 4px;
     font-weight: normal;
     background: transparent;
     color: var(--lightsome-text-color);
-    cursor: pointer;
+    cursor: pointer;;
+
+    width: 85%;
+    height: 50%;
+}
+
+#logout-btn span{
+    background: url('../../assets/logout-16.ico') no-repeat;
+    float: right;
+    width: 2vh;
+    height: 2vh;
+    margin-right: .3vh;
 }
 
 #logout-btn:hover {
-    background: var(--secondary-dark-color);
+    background: var(--primary-dark-color);
 }
 
 @media (min-width: 500px) {
@@ -48,22 +59,19 @@
 
     .header-text {
         font-size: x-large;
+        font-weight: bold;
     }
 
     .header-logout-button {
+        max-height: 10vh;
         width: 10vh;
+        margin-right: 3vh;
     }
-    
-    #logout-btn {
-        border: 0;
-        border-radius: 2px;
-        width: 100%;
-        height: 70%;
-        padding: 0 1vh;
-        font-size: 14px;
-        font-weight: lighter;
-        background: var(--secondary-color);
-        color: var(--lightsome-button-text-color);
+
+    #logout-btn span{
+        background: url('../../assets/logout-16.png') no-repeat;
+        width: 2.4vh;
+        height: 2.4vh;
+        margin-right: .4vh;
     }
- 
 }
