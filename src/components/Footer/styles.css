@@ -1,0 +1,10 @@
+#footer-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  height:6vh;
+  width: 100%;
+  background: rgba(83, 128, 42, 0.3); /*var(--tertiary-dark-color)+opacity*/
+}
