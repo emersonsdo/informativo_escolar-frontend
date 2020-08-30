@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles.css';
 
 function Footer() {
   return (
     <div id="footer-div">
-      {/*Logo com link
+      {/* Logo com link
       <a href="https://www.alura.com.br/">
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
@@ -18,4 +18,4 @@ function Footer() {
   );
 }
 
-export default Footer;  
+export default Footer;
