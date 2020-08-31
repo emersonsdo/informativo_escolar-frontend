@@ -33,17 +33,14 @@
     font-weight: normal;
     background: transparent;
     color: var(--lightsome-text-color);
-    cursor: pointer;;
-
+    cursor: pointer;
     width: 85%;
     height: 50%;
 }
 
-#logout-btn span{
-    background: url('../../assets/logout-16.ico') no-repeat;
+#logout-btn svg {
     float: right;
-    width: 2vh;
-    height: 2vh;
+    size: 10px;
     margin-right: .3vh;
 }
 
@@ -68,10 +65,8 @@
         margin-right: 3vh;
     }
 
-    #logout-btn span{
-        background: url('../../assets/logout-16.png') no-repeat;
-        width: 2.4vh;
-        height: 2.4vh;
+    #logout-btn svg{
+        size: 14px; 
         margin-right: .4vh;
     }
 }

@@ -23,7 +23,9 @@
 body, html, #root {
     background-image: url('./assets/bg.jpg');
     background-size: cover;
-    /* min-height: 100%; */
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased !important;
+
     /* background-color: var(--backgroud-primary-color); */
 }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaSignOutAlt } from 'react-icons/fa';
 import history from '../../utils/history';
 import './styles.css';
 
@@ -18,7 +19,7 @@ export default class Header extends Component {
         <div className="header-logout-button">
           <button id="logout-btn" type="submit" onClick={this.logout}>
             Sair
-            <span />
+            <FaSignOutAlt color="#FFF" />
           </button>
         </div>
       </div>
