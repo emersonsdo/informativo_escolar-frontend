@@ -10,10 +10,11 @@ import history from '../utils/history';
 const Routes = () => (
   <BrowserRouter history={history}>
     <Switch>
-      <PrivateRoute path="/pais" component={Parent} />
+      <Route exact path="/" component={Login} />
+      <PrivateRoute path="/pais/cadastro" component={Parent} />
+      {/* Também serão rotas privadas */}
       <Route path="/inicio" component={Home} />
       <Route path="/usuarios/cadastro" component={UserRegister} />
-      <Route exact path="/" component={Login} />
     </Switch>
   </BrowserRouter>
 );
