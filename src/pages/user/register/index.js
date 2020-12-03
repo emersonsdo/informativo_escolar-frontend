@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function UserRegister() {
@@ -28,13 +29,14 @@ function UserRegister() {
 
   return (
     <div id="container-gestor-register">
-      <div className="container">
-        <p>Cadastro de gestores</p>
+      <p>Cadastro de gestores</p>
+      <div className="content-user">
         <form onSubmit={todo}>
-        <label htmlFor="text">NOME</label>
+          <label htmlFor="text">NOME</label>
           <input
             id="name"
             type="text"
+            name="name"
             placeholder="Nome da pessoa gestora"
             onChange={updateNameValue}
           />
@@ -45,6 +47,7 @@ function UserRegister() {
           <input
             id="email"
             type="email"
+            name="email"
             placeholder="E-mail da pessoa gestora"
             onChange={updateEmailValue}
           />
@@ -55,18 +58,19 @@ function UserRegister() {
           <input
             id="senha"
             type="password"
+            name="password"
             placeholder="Senha da pessoa gestora"
             onChange={updatePasswordValue}
           />
           <div className="container-form-buttons">
+            <Link className="btn" id="clean" to="/usuarios/cadastro">
+              Limpar campos
+            </Link>
+            <Link className="btn" id="cancel" to="/inicio">
+              Cancelar
+            </Link>
             <button className="btn" id="register" type="submit">
               Cadastrar
-            </button>
-            <button className="btn" id="clean" type="submit">
-              Limpar campos
-            </button>
-            <button className="btn" id="cancel" type="submit">
-              Cancelar
             </button>
           </div>
         </form>

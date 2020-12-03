@@ -11,8 +11,8 @@ A fazer:
     - EX.: Exibir mensagens de erro ao logar (OK)
 
 - Pensar no melhor fluxo de navegação
-- CSS da página home
-- Linkar botões da página home
+- CSS da página home (OK)
+- Linkar botões da página home (OK)
 - Deixar página home como privada e substituir a parents como página redirecionada na hora que o login é realizado com sucesso
 
 #8A599A    -lilas
@@ -20,3 +20,7 @@ A fazer:
 #00468C     -azives
 
 #679A38     -verde
+
+
+Os formulários provavelmente vão reutilizar muita coisa um do outro. Ver como componentizá-los!
+Ver como centralizar o texto do 'botão' 'Link' nos formulários.

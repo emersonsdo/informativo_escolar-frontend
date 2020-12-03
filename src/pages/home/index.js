@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import './styles.css';
 import logo from '../../assets/CEB.svg';
@@ -17,24 +17,24 @@ class Home extends Component {
         </div>
 
         <div id="container-buttons">
-          <a className="button" id="btn-news" href="/">
+          <Link className="button" id="btn-news" to="/">
             Informes & avisos
             <span>
               <br /> boletins, atividades e reuniões
             </span>
-          </a>
-          <a className="button" id="btn-parents" href="/">
+          </Link>
+          <Link className="button" id="btn-parents" to="/">
             Cadastro de Pais
             <span>
               <br /> adicionar, listar, excluir
             </span>
-          </a>
-          <a className="button" id="btn-users" href="/usuarios/cadastro">
+          </Link>
+          <Link className="button" id="btn-users" to="/usuarios/cadastro">
             Administração
             <span>
               <br /> delegar funções dentro do portal
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     );
