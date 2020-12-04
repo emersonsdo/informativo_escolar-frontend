@@ -20,8 +20,15 @@ function UserRegister() {
     setPassword(event.target.value);
   }
 
+  function cleanForm(event) {
+    event.preventDefault();
+    setName('');
+    setEmail('');
+    setPassword();
+  }
+
   function todo() {
-    console.log('TODO');
+    console.log('TODO: enviar requisição para o backend');
     console.log(name);
     console.log(email);
     console.log(password);
@@ -37,6 +44,7 @@ function UserRegister() {
             id="name"
             type="text"
             name="name"
+            value={name}
             placeholder="Nome da pessoa gestora"
             onChange={updateNameValue}
           />
@@ -48,6 +56,7 @@ function UserRegister() {
             id="email"
             type="email"
             name="email"
+            value={email}
             placeholder="E-mail da pessoa gestora"
             onChange={updateEmailValue}
           />
@@ -59,13 +68,19 @@ function UserRegister() {
             id="senha"
             type="password"
             name="password"
+            password={password}
             placeholder="Senha da pessoa gestora"
             onChange={updatePasswordValue}
           />
           <div className="container-form-buttons">
-            <Link className="btn" id="clean" to="/usuarios/cadastro">
+            <button
+              className="btn"
+              id="clean"
+              type="button"
+              onClick={cleanForm}
+            >
               Limpar campos
-            </Link>
+            </button>
             <Link className="btn" id="cancel" to="/inicio">
               Cancelar
             </Link>

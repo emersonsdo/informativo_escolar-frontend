@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--dark-text-primary-color);
+  color: var(--lightsome-text-color);
   background-color: var(--tertiary-color);
   border-radius: 2%;
   padding: 30px;
@@ -35,7 +35,6 @@
 
 .content-user form label {
   font-size: 14px;
-  color: var(--dark-text-secondary-color);
   font-weight: bold;
   margin-bottom: 1vh;
 }
@@ -56,7 +55,7 @@
   align-content:space-between;
 }
 
-.content-user .container-form-buttons .btn {
+.btn {
   margin-top: 4vh;
   border: 0;
   border-radius: 3px;
@@ -68,18 +67,18 @@
   color: var(--lightsome-button-text-color);
   cursor: pointer;
   text-decoration: none;
+  font-family: 'Baloo 2', cursive;
+}
+
+.btn:hover {
+  background: var(--secondary-dark-color);
 }
 
 #register {
   margin-left: 4vh;
-  font-family: 'Baloo 2', cursive;
 }
 
 #cancel {
   margin-left: 4vh;
-  padding-top: 1vh;
-}
-
-#clean {
   padding-top: 1vh;
 }
