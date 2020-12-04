@@ -22,5 +22,7 @@ A fazer:
 #679A38     -verde
 
 
-Os formulários provavelmente vão reutilizar muita coisa um do outro. Ver como componentizá-los!
-Ver como centralizar o texto do 'botão' 'Link' nos formulários.
+- Os formulários provavelmente vão reutilizar muita coisa um do outro. Ver como componentizá-los!
+- Ver como centralizar o texto do 'botão' 'Link' nos formulários.
+- Pedir para usuário repetir a senha para confirmar
+- Página login quebrando (e retirar botão sair dessa página?)
